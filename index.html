@@ -1,1 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Crystals Collector</title>
 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <style type="text/css">
+        body { background: rgb(159, 247, 242); color: #3E4551 !important; } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
+     </style>
+</head>
+<body>
+
+	<!-- main container -->
+    <div class="container-fluid" id="mainBox">
+
+		<!-- header -->
+		<div class="jumbotron" style="background-color: rgb(245, 158, 158);">
+
+			<h1 class="text-center">Crystals Collector</h1>
+
+			<h2 class="text-center">How to Play</h2>
+
+			<h4 class="text-center">
+                You will be given a random number at the start of the game. There are four crystals below. 
+                By clicking on a crystal you will add a specific amount of points to your total score which varies for 
+                each crystal. The value of the crystals is hidden and changes with each game.  If your number matches the 
+                "Match Number" you win, however if you go over you lose.  Choose wisely!
+                 
+			</h4>
+
+		</div>
+
+		<!-- game section -->
+		<div class="row" id="gameSection">
+
+			<!-- first column for random number -->
+			<div class="col-md-3" id="numberSection">
+				<h3 class="text-center" id="random">Match Number:</h3>
+				<h1 class="numberBox text-center" id="randomNumber">120</h1>
+			</div>
+
+			<!-- second column for buttons -->
+			<div class="col-md-6 text-center" id="buttonSection">
+
+				<!-- red crystal -->
+				<button id="button-1" class="bg-danger"value="0"><img src="./assets/images/red.jpg" class="img-responsive icons" id="icon1"></button>
+
+				<!-- blue crystal -->
+				<button id="button-2" class="bg-primary" value="0"><img src="./assets/images/blue.jpg" class="img-responsive icons" id="icon2"></button>
+
+				<!-- green crystal -->
+				<button id="button-3" class="bg-success" value="0"><img src="./assets/images/green.jpg" class="img-responsive icons" id="icon3"></button>
+
+				<!-- yello crystal -->
+				<button id="button-4" class="bg-warning" value="0"><img src="./assets/images/yellow.jpg" class="img-responsive icons" id="icon4"></button>
+
+			</div>
+
+			<!-- third column for total -->
+			<div class="col-md-3" id="totalPoints">
+				<h3 class="text-center" id="score">Your Total Score:</h3>
+				<h1 class="numberBox text-center" id="totalNumber">0</h1>
+			</div>
+
+		</div>
+
+		<!-- footer tracking wins and losses -->
+		<div class="row" id="scoreSection">
+
+			<!-- spacer column -->
+			<div class="col-md-4"></div>
+
+			<!-- wins column -->
+			<div class="col-md-2" id="winSection">
+				<h3 class="text-center" id="wins">Wins:	0</h3>
+			</div>
+
+			<!-- losses column -->
+			<div class="col-md-2" id="lossSection">
+				<h3 class="text-center" id="losses">Losses: 0</h3>
+			</div>
+
+			<!-- spacer column -->
+			<div class="col-md-4"></div>
+
+		</div>
+
+	</div>
+
+</body>
+
+<script rel="text/javascript" src="./assets/javascript/game.js"></script>
+
+</html>
