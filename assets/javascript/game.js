@@ -4,7 +4,7 @@ $(document).ready(function() {
 	// random computer variable array
 	var rand = [];
 
-	for (var r = 19; r < 121; r++) {
+	for (var r = 19; r < 90; r++) {
 		rand.push(r);
 	}
 
